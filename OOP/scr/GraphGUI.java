@@ -92,13 +92,15 @@ public class GraphGUI extends JFrame {
         });
         inputPanel.add(removeVertexButton);
 
+        JButton showGraphButton = new JButton("Показать граф");
+        showGraphButton.addActionListener(e -> showGraphVisualization());
+        inputPanel.add(showGraphButton);
+
         JButton checkConnectionButton = new JButton("Проверить связь");
         checkConnectionButton.addActionListener(e -> checkConnection());
         inputPanel.add(checkConnectionButton);
 
-        JButton showGraphButton = new JButton("Показать граф");
-        showGraphButton.addActionListener(e -> showGraphVisualization());
-        inputPanel.add(showGraphButton);
+
 
         add(inputPanel, BorderLayout.NORTH);
     }
